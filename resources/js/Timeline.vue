@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'LdTimeline',
+  name: 'SbTimeline',
   props: {
     items: { type: Array, default: () => [] },
     horizontal: { type: Boolean, default: false }
