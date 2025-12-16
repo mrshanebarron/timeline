@@ -8,7 +8,7 @@ class TimelineServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/timeline.php', 'sb-timeline');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-timeline.php', 'sb-timeline');
     }
 
     public function boot(): void
@@ -21,7 +21,7 @@ class TimelineServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/timeline.php' => config_path('sb-timeline.php'),
+                __DIR__ . '/../config/sb-timeline.php' => config_path('sb-timeline.php'),
             ], 'sb-timeline-config');
         }
     }
