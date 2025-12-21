@@ -16,6 +16,15 @@ $dotCol = $dotColors[$this->dotColor] ?? $dotColors['blue'];
 @endphp
 
 <div style="position: relative;">
+    @if($this->animated)
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    @endif
+
     <div style="position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: {{ $lineCol }};"></div>
 
     <div style="display: flex; flex-direction: column; gap: 32px;">
@@ -42,12 +51,3 @@ $dotCol = $dotColors[$this->dotColor] ?? $dotColors['blue'];
         @endforeach
     </div>
 </div>
-
-@if($this->animated)
-<style>
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
-@endif
