@@ -17,8 +17,9 @@ $dotCol = $dotColors[$this->dotColor] ?? $dotColors['blue'];
 
 <div style="position: relative;">
     @if($this->animated)
-    <style>
-        @keyframes fadeIn {
+    <style scoped>
+        .sb-timeline-animated { animation: sbTimelineFadeIn 0.5s ease-out forwards; opacity: 0; }
+        @keyframes sbTimelineFadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
