@@ -30,7 +30,7 @@ $dotCol = $dotColors[$this->dotColor] ?? $dotColors['blue'];
 
     <div style="display: flex; flex-direction: column; gap: 32px;">
         @foreach($this->items as $index => $item)
-        <div style="position: relative; padding-left: 40px; {{ $this->animated ? 'animation: fadeIn 0.5s ease-out forwards; opacity: 0; animation-delay: ' . ($index * 100) . 'ms;' : '' }}">
+        <div style="position: relative; padding-left: 40px; {{ $this->animated ? 'animation: sbTimelineFadeIn 0.5s ease-out forwards; opacity: 0; animation-delay: ' . ($index * 100) . 'ms;' : '' }}">
             {{-- Dot --}}
             <div style="position: absolute; left: 10px; width: 12px; height: 12px; border-radius: 50%; background: {{ $dotCol }}; box-shadow: 0 0 0 4px white;"></div>
 
